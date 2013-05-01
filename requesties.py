@@ -11,5 +11,6 @@ login_data = {
 s = requests.Session()
 s.post('https://my.ecofactor.com/mobile/loginProcess', data=login_data)
 
-print s.headers
+print s.get('https://my.ecofactor.com/mobile/main.html', cookies=s.cookies).text
+
 
